@@ -1,5 +1,9 @@
 <?php
-
+session_start();
+if (isset($_SESSION["useruid"]) || isset($_SESSION["userid"])) {
+    header("location: home.php");
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
