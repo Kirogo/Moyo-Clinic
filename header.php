@@ -24,7 +24,7 @@ if (isset($_SESSION["useruid"]) || isset($_SESSION["userid"])) {
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
-
+    <link href="css/app.css" rel="stylesheet" />
 <!--Body-->
 
 <body id="page-top">
