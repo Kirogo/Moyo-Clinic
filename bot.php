@@ -1,12 +1,4 @@
-<!-- php start for bot-->
-<!-- step 1 => create database for response and user messages -->
-<!-- step 2 => create a connection -->
-
 <?php
-// server = localhost
-// username = root
-// password = ""
-// database Name = "trailbot"
 
 include 'includes/dbh.inc.php';
 
