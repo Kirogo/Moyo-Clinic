@@ -1,56 +1,7 @@
 <?php
-//include_once 'header.php';
+include_once 'header.php';
 
 ?>
-
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-  <title>Heart Disease Diagnostic System</title>
-  <link rel="icon" type="image/x-icon" href="assets/img/hosbig.png" />
-  <!-- Font Awesome icons (free version)-->
-  <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
-  <!-- Google fonts-->
-  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
-  <!-- Core theme CSS (includes Bootstrap)-->
-  <link href="css/styles.css" rel="stylesheet" />
-</head>
-
-<!--Body-->
-
-<body id="page-top">
-  <!-- Navigation-->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-    <div class="container px-4 px-lg-5">
-      <a class="navbar-brand" href="index.php">Home</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="about.php">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contacts.php">Contacts</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="includes/logout.inc.php">Log out</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-
   <!-- Masthead-->
   <!-- Projects-->
   <!-- Signup-->
@@ -63,46 +14,12 @@
           <!-- Featured Project Row-->
           <!-- Project One Row-->
           <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
-            <div class="col-lg-6">
-              <img class="img-fluid" src="assets/img/scan.jpg" alt="..." style="border-radius: 7.5px" />
-            </div>
-            <div class="col-lg-6">
-              <div class="bg-black text-center h-100 project">
-                <div class="d-flex h-100">
-                  <div class="project-text w-100 my-auto text-center text-lg-left">
-                    <h4 class="text-white">Diagnostic</h4>
-                    <p class="mb-0 text-white-50">
-                      "Moyo Clinic helps its users diagnose themselves by
-                      going through deep analysis on their symptoms and
-                      getting their results."
-                    </p>
-                    <hr class="d-none d-lg-block mb-0 ms-0" />
-                  </div>
-                </div>
-              </div>
+            <div class="col-lg-12 bg-light">
+              bdcjdbcjdb
             </div>
           </div>
           <!-- Project Two Row-->
-          <div class="row gx-0 justify-content-center">
-            <div class="col-lg-6">
-              <img class="img-fluid" src="assets/img/stecomp.jpg" alt="..." style="border-radius: 7.5px" />
-            </div>
-            <div class="col-lg-6 order-lg-first">
-              <div class="bg-black text-center h-100 project">
-                <div class="d-flex h-100">
-                  <div class="project-text w-100 my-auto text-center text-lg-right">
-                    <h4 class="text-white">Consultation</h4>
-                    <p class="mb-0 text-white-50">
-                      “ The system gives counsel to users on the best
-                      practices to cope with their diagnostic results and live
-                      a healthy life.”
-                    </p>
-                    <hr class="d-none d-lg-block mb-0 me-0" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+       
         </div>
       </div>
     </div>

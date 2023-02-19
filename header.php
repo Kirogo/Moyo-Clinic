@@ -1,9 +1,11 @@
 <?php
+include 'includes/dbh.inc.php';
 session_start();
-
-
+if (isset($_SESSION["useruid"]) || isset($_SESSION["userid"])) {
+    $userUid = $_SESSION["useruid"];
+    $user = mysqli_fetch_array(mysqli_query($conn, "SELECT * FROM users WHERE usersUid='$userUid'"));
+}
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +14,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Heart Disease Diagnostic System </title>
+    <title>Heart Disease Diagnostic System</title>
     <link rel="icon" type="image/x-icon" href="assets/img/hosbig.png" />
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
@@ -23,37 +25,45 @@ session_start();
     <link href="css/styles.css" rel="stylesheet" />
 </head>
 
-<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-    <div class="container px-4 px-lg-5">
-        <a class="navbar-brand" href="index.php">Home</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            Menu
-            <i class="fas fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link"><?php
-                                        if (isset($_SESSION["useruid"])) {
-                                            echo "<p>" . $_SESSION["useruid"] . "</p>";
-                                        } ?></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link">
-                        <?php
-                        if (isset($_SESSION["useruid"])) {
-                            echo "<li><a href='includes/logout.inc.php'>Log Out</a></li>";
-                        } else {
-                            echo "<li><a href='login.php'>Log In</a> </li>";
-                        } ?>
-                    </a>
-                </li>
-                <li class="nav-item">
+<!--Body-->
 
-                </li>
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="index.php">Home</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.php">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacts.php">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.php">Get Started</a>
+                    </li>
+                    <?php
+                    if (isset($_SESSION["useruid"]) || isset($_SESSION["userid"])) {
+                    ?>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><?php echo $user['usersName']; ?></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="includes/logout.inc.php">Logout</a>
+                        </li>
 
 
-            </ul>
+                    <?php
+                    }
+                    ?>
+
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
