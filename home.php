@@ -29,10 +29,10 @@ include_once 'header.php';
                 </div>
                 <div class="input-container">
                   <label for="input-field" id='card-title'>Add Signs & Symptoms</label>
-                  <input type="text" name="input-field" placeholder="Enter your symptom" id="input-field" />
+                  <input type="text" name="input-field" placeholder="Enter your symptom" id="datainput" />
                 </div>
                 <div style="place-items: center;">
-                <button id="add-input-btn" type='button'><i class="fa fa-plus" aria-hidden="true"></i> Add More</button>
+                <!-- <button id="add-input-btn" type='button'><i class="fa fa-plus" aria-hidden="true"></i> Add More</button> -->
                 <button type="button" name='getresult' id="submit-btn"  class="submit-button">Get Results <i class="fa fa-pencil" aria-hidden="true"></i></button>
                 </div>
               </div>
@@ -57,34 +57,29 @@ include_once 'header.php';
 </footer>
 <!-- Bootstrap core JS-->
 <script>
-  const addInputBtn = document.getElementById("add-input-btn");
+  // const addInputBtn = document.getElementById("add-input-btn");
   const inputContainer = document.querySelector(".input-container");
   const inputnum = document.querySelector(".input-num");
   let inputCounter = 1;
 
-  addInputBtn.addEventListener("click", function() {
-    const newInput = document.createElement("input");
-    newInput.setAttribute("type", "text");
-    newInput.setAttribute("name", "input-field-" + inputCounter);
-    newInput.setAttribute("class", "new-input");
-    newInput.setAttribute("placeholder", "Enter your symptom");
-    inputContainer.appendChild(newInput);
-    inputCounter++;
-  });
+  // addInputBtn.addEventListener("click", function() {
+  //   const newInput = document.createElement("input");
+  //   newInput.setAttribute("type", "text");
+  //   newInput.setAttribute("name", "input-field-" + inputCounter);
+  //   newInput.setAttribute("class", "new-input");
+  //   newInput.setAttribute("placeholder", "Enter your symptom");
+  //   inputContainer.appendChild(newInput);
+  //   inputCounter++;
+  // });
 
   // Send input data to PHP file
   const submitBtn = document.getElementById("submit-btn");
   submitBtn.addEventListener("click", function() {
     const response = document.getElementById("response");
-    const inputs = document.querySelectorAll(".new-input");
-    let inputData = "";
-
-    inputs.forEach(function(input) {
-      inputData += input.value + " ";
-    });
+    let inputData = document.getElementById("datainput").value;
 
     const xhr = new XMLHttpRequest();
-    xhr.open("POST", "symptomsprocessors.php", true);
+    xhr.open("POST", "processdata.php", true);
     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhr.onreadystatechange = function() {
       if (xhr.readyState === 4 && xhr.status === 200) {
