@@ -1,0 +1,134 @@
+[
+   {
+      "prompt": "chest pain",
+      "completion": "Coronary Artery, Arrhythimia, Cardiomyopathy or Pericardial Disease."
+   },
+   {
+      "prompt": "discomfort",
+      "completion": "Coronary Artery, Arrhythimia or Cardiomyopathy."
+   },
+   {
+      "prompt": "shortness of breath",
+      "completion": "Coronary Artery, Heart Failure, Cardiomyopathy, Arryhthmia, Pericardial Disease or Congenital Heart Disease."
+   },
+   {
+      "prompt": "fatigue",
+      "completion": "Coronary Artery, Heart Failure, Cardiomyopathy, Pericardial Disease or Congenital Heart Disease."
+   },
+   {
+      "prompt": "weakness",
+      "completion": "Coronary Artery, Heart Failure, Cardiomyopathy, Pericardial Disease or Congenital Heart Disease."
+   },
+   {
+      "prompt": "numbness in the limbs",
+      "completion": "Coronary Artery."
+   },
+   {
+      "prompt": "irregular heartbeat",
+      "completion": "Coronary Artery, Cardiomyopathy or Heart Failure."
+   },
+   {
+      "prompt": "arrhythmia",
+      "completion": "Coronary Artery or Cardiomyopathy."
+   },
+   {
+      "prompt": "nausea",
+      "completion": "Coronary Artery."
+   },
+   {
+      "prompt": "dizziness",
+      "completion": "Coronary Artery, Arrhythimia or Cardiomyopathy."
+   },
+   {
+      "prompt": "rapid heartbeat",
+      "completion": "Heart Failure or Arrhythmia."
+   },
+   {
+      "prompt": "swelling in the legs",
+      "completion": "Heart Failure, Cardiomyopathy or Pericardial Disease."
+   },
+   {
+      "prompt": "swelling in the ankles",
+      "completion": "Heart Failure, Cardiomyopathy or Pericardial Disease."
+   },
+   {
+      "prompt": "swelling in the feet",
+      "completion": "Heart Failure, Cardiomyopathy or Pericardial Disease."
+   },
+   {
+      "prompt": "rapid heartbeat",
+      "completion": "Heart Failure or Arrhythmia."
+   },
+   {
+      "prompt": "persistent cough",
+      "completion": "Heart Failure."
+   },
+   {
+      "prompt": "wheezing",
+      "completion": "Heart Failure."
+   },
+   {
+      "prompt": "difficulty concentrating",
+      "completion": "Heart Failure."
+   },
+   {
+      "prompt": "confusion",
+      "completion": "Heart Failure."
+   },
+   {
+      "prompt": "flutttering heartbeat",
+      "completion": "Arrhythmia."
+   },
+   {
+      "prompt": "slow heartbeat",
+      "completion": "Arrhythmia."
+   },
+   {
+      "prompt": "fainting",
+      "completion": "Arrhythmia or Cardiomyopathy."
+   },
+   {
+      "prompt": "lightheadedness",
+      "completion": "Arrhythmia."
+   },
+   {
+      "prompt": "near-fainting spells",
+      "completion": "Arrhythmia."
+   },
+   {
+      "prompt": "bluish tint to the skin",
+      "completion": "Congenital Heart Disease."
+   },
+   {
+      "prompt": "bluish tint to the lips",
+      "completion": "Congenital Heart Disease."
+   },
+   {
+      "prompt": "bluish tint to the nails",
+      "completion": "Congenital Heart Disease."
+   },
+   {
+      "prompt": "poor growth in infants",
+      "completion": "Congenital Heart Disease."
+   },
+   {
+      "prompt": "weight gain in infants",
+      "completion": "Congenital Heart Disease."
+   },
+   {
+      "prompt": "respiratory infections",
+      "completion": "Congenital Heart Disease."
+   },
+   {
+      "prompt": "dry cough",
+      "completion": "Pericardial Disease."
+   },
+   {
+      "prompt": "fever",
+      "completion": "Pericardial Disease."
+   },
+   {
+      "prompt": "chills",
+      "completion": "Pericardial Disease."
+   }
+]

@@ -10,7 +10,7 @@ if (isset($_SESSION["useruid"]) || isset($_SESSION["userid"])) {
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" /> 
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
@@ -25,7 +25,7 @@ if (isset($_SESSION["useruid"]) || isset($_SESSION["userid"])) {
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
     <link href="css/app.css" rel="stylesheet" />
-<!--Body-->
+    <!--Body-->
 
 <body id="page-top">
     <!-- Navigation-->
@@ -39,31 +39,30 @@ if (isset($_SESSION["useruid"]) || isset($_SESSION["userid"])) {
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
+                        <a class="nav-link" href="login.php">Get Started</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="about.php">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contacts.php">Contact</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="login.php">Get Started</a>
-                    </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="chatbot.php">Chatbot</a>
-                    <?php
-                    if (isset($_SESSION["useruid"]) || isset($_SESSION["userid"])) {
-                    ?>
+                        <?php
+                        if (isset($_SESSION["useruid"]) || isset($_SESSION["userid"])) {
+                        ?>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><?php echo $user['usersName']; ?></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="includes/logout.inc.php">Logout</a>
-                        </li>
-
-
-                    <?php
-                    }
-                    ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><?php echo $user['usersName']; ?></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="includes/logout.inc.php">Logout</a>
+                    </li>
+                <?php
+                        }
+                ?>
 
                 </ul>
             </div>
