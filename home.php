@@ -32,16 +32,9 @@ include_once 'header.php';
                   <input type="text" name="input-field" placeholder="Enter your symptom" id="datainput" />
                 </div>
                 <div style="place-items: center;">
-                <!-- <button id="add-input-btn" type='button'><i class="fa fa-plus" aria-hidden="true"></i> Add More</button> -->
-                <button type="button" name='getresult' id="submit-btn"  class="submit-button">Get Results <i class="fa fa-pencil" aria-hidden="true"></i></button>
-                </div>
-<<<<<<< HEAD
-                <div style="place-items: center;">
                 <button id="add-input-btn" type='button'><i class="fa fa-plus" aria-hidden="true"></i> Add More</button>
                 <button type="button" name='getresult' id="submit-btn"  class="submit-button">Get Results <i class="fa fa-pencil" aria-hidden="true"></i></button>
                 </div>
-=======
->>>>>>> 853105f9b9681dcdf0b6ac4af3b146cc668f1a25
               </div>
             </div>
           </form>
