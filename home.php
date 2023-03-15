@@ -31,8 +31,10 @@ include_once 'header.php';
                   <label for="input-field" id='card-title'>Add Signs & Symptoms</label>
                   <input type="text" name="input-field" placeholder="Enter your symptom" id="input-field" />
                 </div>
+                <div style="place-items: center;">
                 <button id="add-input-btn" type='button'><i class="fa fa-plus" aria-hidden="true"></i> Add More</button>
-                <button type="button" name='getresult' id="submit-btn" class="submit-button">GET RESULTS <i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                <button type="button" name='getresult' id="submit-btn"  class="submit-button">Get Results <i class="fa fa-pencil" aria-hidden="true"></i></button>
+                </div>
               </div>
             </div>
           </form>

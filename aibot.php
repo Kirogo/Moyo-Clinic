@@ -5,11 +5,11 @@ require __DIR__ . '/vendor/autoload.php'; // remove this line if you use a PHP F
 use Orhanerday\OpenAi\OpenAi;
 if($conn){
 $user_messages = mysqli_real_escape_string($conn, $_POST['messageValue']);
-$open_ai_key = "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";
+$open_ai_key = "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";
 $open_ai = new OpenAi($open_ai_key);
 
 $complete = $open_ai->completion([
-    'model' => 'davinci',
+    'model' => 'davinci:ft-personal:hearttrial-6-2023-03-02-01-23-17',
     'prompt' => $user_messages,
     'temperature' => 0.9,
     'max_tokens' => 150,

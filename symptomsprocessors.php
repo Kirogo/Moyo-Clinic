@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $open_ai = new OpenAi($open_ai_key);
   $complete = $open_ai->completion([
     'model' => 'davinci',
-    'prompt' =>  'Suggest the heart disease that is indicated by the following signs and symptoms '. $inputData. ' and, the probability of it being the exact disease suggested',
+    'prompt' =>  'Suggest the heart disease that is indicated by the following signs and symptoms '. $inputData. 'probability of it being the exact disease suggested',
     'temperature' => 0.9,
     'max_tokens' => 150,
     'frequency_penalty' => 0,
