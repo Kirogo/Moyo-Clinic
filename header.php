@@ -48,6 +48,7 @@ if (isset($_SESSION["useruid"]) || isset($_SESSION["userid"])) {
                         <a class="nav-link" href="contacts.php">Contact</a>
                     </li>
 
+<<<<<<< HEAD
                     <li class="nav-item">
                         <a class="nav-link" href="chatbot.php">Doctors' Access</a>
                         <?php
@@ -58,6 +59,18 @@ if (isset($_SESSION["useruid"]) || isset($_SESSION["userid"])) {
                         <a class="nav-link" href="#"><?php echo $user['usersName']; ?></a>
                     </li>
                     <li class="nav-item">
+=======
+                    <li class="nav-item">
+                        <a class="nav-link" href="chatbot.php">Chatbot</a>
+                        <?php
+                        if (isset($_SESSION["useruid"]) || isset($_SESSION["userid"])) {
+                        ?>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><?php echo $user['usersName']; ?></a>
+                    </li>
+                    <li class="nav-item">
+>>>>>>> 853105f9b9681dcdf0b6ac4af3b146cc668f1a25
                         <a class="nav-link" href="includes/logout.inc.php">Logout</a>
                     </li>
                 <?php

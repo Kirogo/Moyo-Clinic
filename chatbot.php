@@ -14,7 +14,7 @@ include_once 'header.php';
         <!-- Featured Project Row-->
         <!-- Project One Row-->
         <div class="row gx-0 mb-5 mb-lg-0 justify-content-center" >
-          <div class="col-lg-12 bg-light" style= "border-radius: 25px;">
+          <div class="col-lg-12 bg-light" style= "border-radius: 50px;">
               <div id="screen">
                 <div id="header">Moyo Assistant</div>
                 <div id="messageDisplaySection">

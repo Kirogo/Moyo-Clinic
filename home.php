@@ -17,8 +17,8 @@ include_once 'header.php';
 
           <form class="form-horizontal" action="symptomsprocessors.php" method="post">
 
-            <div class="col-lg-12 bg-light">
-              <div class="chatholder">
+            <div class="col-lg-15 bg-light">
+              <div class="chatholder" style="width:92%; height:auto">
               <div class="message">
                 <div class="message__text">
                   <p>Hi, I am your Moyo assistant. I will help you diagnose your heart disease. Please add the sign & symptoms below.</p>
@@ -29,12 +29,19 @@ include_once 'header.php';
                 </div>
                 <div class="input-container">
                   <label for="input-field" id='card-title'>Add Signs & Symptoms</label>
-                  <input type="text" name="input-field" placeholder="Enter your symptom" id="input-field" />
+                  <input type="text" name="input-field" placeholder="Enter your symptom" id="datainput" />
                 </div>
+                <div style="place-items: center;">
+                <!-- <button id="add-input-btn" type='button'><i class="fa fa-plus" aria-hidden="true"></i> Add More</button> -->
+                <button type="button" name='getresult' id="submit-btn"  class="submit-button">Get Results <i class="fa fa-pencil" aria-hidden="true"></i></button>
+                </div>
+<<<<<<< HEAD
                 <div style="place-items: center;">
                 <button id="add-input-btn" type='button'><i class="fa fa-plus" aria-hidden="true"></i> Add More</button>
                 <button type="button" name='getresult' id="submit-btn"  class="submit-button">Get Results <i class="fa fa-pencil" aria-hidden="true"></i></button>
                 </div>
+=======
+>>>>>>> 853105f9b9681dcdf0b6ac4af3b146cc668f1a25
               </div>
             </div>
           </form>
@@ -57,34 +64,29 @@ include_once 'header.php';
 </footer>
 <!-- Bootstrap core JS-->
 <script>
-  const addInputBtn = document.getElementById("add-input-btn");
+  // const addInputBtn = document.getElementById("add-input-btn");
   const inputContainer = document.querySelector(".input-container");
   const inputnum = document.querySelector(".input-num");
   let inputCounter = 1;
 
-  addInputBtn.addEventListener("click", function() {
-    const newInput = document.createElement("input");
-    newInput.setAttribute("type", "text");
-    newInput.setAttribute("name", "input-field-" + inputCounter);
-    newInput.setAttribute("class", "new-input");
-    newInput.setAttribute("placeholder", "Enter your symptom");
-    inputContainer.appendChild(newInput);
-    inputCounter++;
-  });
+  // addInputBtn.addEventListener("click", function() {
+  //   const newInput = document.createElement("input");
+  //   newInput.setAttribute("type", "text");
+  //   newInput.setAttribute("name", "input-field-" + inputCounter);
+  //   newInput.setAttribute("class", "new-input");
+  //   newInput.setAttribute("placeholder", "Enter your symptom");
+  //   inputContainer.appendChild(newInput);
+  //   inputCounter++;
+  // });
 
   // Send input data to PHP file
   const submitBtn = document.getElementById("submit-btn");
   submitBtn.addEventListener("click", function() {
     const response = document.getElementById("response");
-    const inputs = document.querySelectorAll(".new-input");
-    let inputData = "";
-
-    inputs.forEach(function(input) {
-      inputData += input.value + " ";
-    });
+    let inputData = document.getElementById("datainput").value;
 
     const xhr = new XMLHttpRequest();
-    xhr.open("POST", "symptomsprocessors.php", true);
+    xhr.open("POST", "processdata.php", true);
     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhr.onreadystatechange = function() {
       if (xhr.readyState === 4 && xhr.status === 200) {
