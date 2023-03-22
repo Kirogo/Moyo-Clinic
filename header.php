@@ -39,30 +39,26 @@ if (isset($_SESSION["useruid"]) || isset($_SESSION["userid"])) {
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="login.php">Get Started</a>
-                    </li>
+                        <a class="nav-link" href="admin/html/admin-index.php">Doctors' Access</a>
                     <li class="nav-item">
                         <a class="nav-link" href="about.php">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contacts.php">Contact</a>
                     </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link" href="chatbot.php">Doctors' Access</a>
-                        <?php
-                        if (isset($_SESSION["useruid"]) || isset($_SESSION["userid"])) {
-                        ?>
+                    <?php
+                    if (isset($_SESSION["useruid"]) || isset($_SESSION["userid"])) {
+                    ?>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><?php echo $user['usersName']; ?></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="includes/logout.inc.php">Logout</a>
-                    </li>
-                <?php
-                        }
-                ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href=""><?php echo $user['usersName']; ?></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="includes/logout.inc.php">Logout</a>
+                        </li>
+                    <?php
+                    }
+                    ?>
 
                 </ul>
             </div>
