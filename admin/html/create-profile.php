@@ -81,13 +81,12 @@ $username = "";
                         <li class="text-center p-20 upgrade-btn">
                             <a href="create-profile.php" class="btn d-block w-100 text-white" target=""></a>
                         </li>
-
-
-                        <li class="text-center p-20 upgrade-btn">
-                            <a href="create-profile.php" class="btn d-block w-100 btn-success text-white" target="">New Patient Account</a>
-                        </li>
-
                     </ul>
+                    <div class="col-6">
+                        <div class="text-end upgrade-btn">
+                            <a href="../includes/logout.inc.php" class="btn btn-danger text-white">Logout</a>
+                        </div>
+                    </div>
 
                 </nav>
                 <!-- End Sidebar navigation -->
@@ -114,6 +113,11 @@ $username = "";
                             </ol>
                         </nav>
                         <h1 class="mb-0 fw-bold">Profile</h1>
+                    </div>
+                    <div class="col-6">
+                        <div class="text-end upgrade-btn">
+                            <a href="create-profile.php" class="btn btn-primary text-white">New Patient Account</a>
+                        </div>
                     </div>
                 </div>
             </div>

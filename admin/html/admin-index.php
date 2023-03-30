@@ -3,7 +3,7 @@ include '../includes/dbh.inc.php';
 session_start();
 if (isset($_SESSION["useruid"]) || isset($_SESSION["userid"])) {
     $userUid = $_SESSION["useruid"];
-    $user = mysqli_fetch_array(mysqli_query($conn, "SELECT * FROM users WHERE usersUid='$userUid'"));
+    $user = mysqli_fetch_array(mysqli_query($conn, "SELECT * FROM moyoadmin WHERE usersUid='$userUid'"));
 }
 ?>
 
@@ -73,9 +73,15 @@ if (isset($_SESSION["useruid"]) || isset($_SESSION["userid"])) {
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="admin-index.php" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Dashboard</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="create-profile.php" aria-expanded="false"><i class="mdi mdi-account-network"></i><span class="hide-menu">Profiles</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="disease.php" aria-expanded="false"><i class="mdi mdi-border-all"></i><span class="hide-menu">Diseases</span></a></li>
-
+                        <li class="text-center p-20 upgrade-btn">
+                        </li>
 
                     </ul>
+                    <div class="col-6">
+                        <div class="text-end upgrade-btn">
+                            <a href="../includes/logout.inc.php" class="btn btn-danger text-white">Logout</a>
+                        </div>
+                    </div>
 
                 </nav>
                 <!-- End Sidebar navigation -->
@@ -94,16 +100,17 @@ if (isset($_SESSION["useruid"]) || isset($_SESSION["userid"])) {
                                 <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
                             </ol>
                         </nav>
-                        <h1 class="mb-0 fw-bold">Dashboard</h1>
+                        <?php
+                    if (isset($_SESSION["useruid"]) || isset($_SESSION["userid"])) {
+                    ?>
+                    <h1 class="mb-0 fw-bold"><?php echo $user['usersName']; ?> </h1>
+                    <?php
+                    }
+                    ?>
                     </div>
                     <div class="col-6">
                         <div class="text-end upgrade-btn">
                             <a href="../../index.php" class="btn btn-primary text-white">Homepage</a>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="text-end upgrade-btn">
-                            <a href="../includes/logout.inc.php" class="btn btn-danger text-white">Logout</a>
                         </div>
                     </div>
                 </div>
@@ -162,7 +169,7 @@ if (isset($_SESSION["useruid"]) || isset($_SESSION["userid"])) {
                                                     $name = $row["usersName"];
                                                     $email = $row["usersEmail"];
                                                     $username = $row["usersUid"];
-                                                
+
                                                     echo "
 <tr> 
 <td>$id</td>

@@ -109,17 +109,13 @@ mysqli_close($conn);
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="create-profile.php" aria-expanded="false"><i class="mdi mdi-account-network"></i><span class="hide-menu">Profiles</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="disease.php" aria-expanded="false"><i class="mdi mdi-border-all"></i><span class="hide-menu">Diseases</span></a></li>
 
-                        <li class="text-center p-20 upgrade-btn">
-                            <a href="create-profile.php" class="btn d-block w-100 text-white" target=""></a>
-                        </li>
-
-
-                        <li class="text-center p-20 upgrade-btn">
-                            <a href="add-disease.php" class="btn d-block w-100 btn-success text-white">Add Disease Category</a>
-                        </li>
-
 
                     </ul>
+                    <div class="col-6">
+                        <div class="text-end upgrade-btn">
+                            <a href="../includes/logout.inc.php" class="btn btn-danger text-white">Logout</a>
+                        </div>
+                    </div>
 
                 </nav>
                 <!-- End Sidebar navigation -->

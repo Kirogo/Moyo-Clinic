@@ -44,7 +44,7 @@ function pwdMatch($pwd, $pwdRepeat)
 
 function uidExists($conn, $username, $email)
 {
-    $sql = "SELECT * from users where usersUid = ? or usersEmail = ?;";
+    $sql = "SELECT * from moyoadmin where usersUid = ? or usersEmail = ?;";
     $stmt = mysqli_stmt_init($conn);
 
     if (!mysqli_stmt_prepare($stmt, $sql)) {
@@ -69,7 +69,7 @@ function uidExists($conn, $username, $email)
 
 function createUser($conn, $name, $email, $username, $pwd)
 {
-    $sql = "INSERT INTO users(usersName, usersEmail, usersUid, usersPwd) values (?, ?, ?, ?) ;";
+    $sql = "INSERT INTO moyoadmin(usersName, usersEmail, usersUid, usersPwd) values (?, ?, ?, ?) ;";
     $stmt = mysqli_stmt_init($conn);
 
     if (!mysqli_stmt_prepare($stmt, $sql)) {
@@ -103,7 +103,7 @@ function loginUser($conn, $username, $pwd)
     $uidExists = uidExists($conn, $username, $username);
 
     if ($uidExists === false) {
-        header("location: ../login.php?error=wronglogin");
+        header("location: ../html/login.php?error=wronglogin");
         exit;
     }
 
@@ -111,7 +111,7 @@ function loginUser($conn, $username, $pwd)
     $checkpwd = password_verify($pwd, $pwdHashed);
 
     if ($checkpwd == false) {
-        header("location: ../login.php?error=wronglogin");
+        header("location: ../html/login.php?error=wronglogin");
         exit;
     } else if ($checkpwd == true) {
         session_start();
