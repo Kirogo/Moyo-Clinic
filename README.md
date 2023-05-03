@@ -12,4 +12,5 @@ This website can be used to help both doctors and patients to diagnose heart rel
 - Congenital Heart Disease
 - Pericardial Disease
 
+NOTE : THIS PROJECT WAS DONE FOR EDUCATIONAL PURPOSES ONLY
 
