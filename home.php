@@ -27,11 +27,15 @@ include_once 'header.php';
               </div>
               <!-- Trial to See if the Code will work-->
 
-              
+              <style>
+                .input-container input {
+                  width: 90%;
+                }
+              </style>
 
               <div class="input-container">
                 <label for="input-field" id="card-title">Add Signs & Symptoms</label>
-                <input type="text" id="output-field" style="place-items: center;" readonly />
+                <input type="text" id="output-field" disabled placeholder="" style="place-items: center; width:90%;" readonly />
                 <div id="input-fields">
                   <input type="text" name="input-field[]" placeholder="Enter your symptom" class="datainput" />
                 </div>
@@ -71,6 +75,8 @@ include_once 'header.php';
 
                 document.getElementById("submit-btn").addEventListener("click", function() {
                   const inputValues = document.querySelectorAll("input[name='input-field[]']");
+
+
                   const symptoms = Array.from(inputValues).map(input => input.value);
 
                   const MIN_MATCH_THRESHOLD = 2; // set the minimum number of symptoms that must match
@@ -94,6 +100,23 @@ include_once 'header.php';
                   if (maxMatches >= MIN_MATCH_THRESHOLD) {
                     resultField.value = matchedDisease;
 
+                    //STORE INFO IN THE DB
+                    $.ajax({
+                      url: "storesearch.php",
+                      type: "POST",
+                      data: {
+                        allSymptoms: symptoms.join(),
+                        results: matchedDisease
+                      },
+                      success: function(response) {
+                        //alert(response.status);
+                        console.log(response.status);
+                      },
+                      error: function(xhr, status, error) {
+                        console.log(xhr.responseText);
+                      }
+                    });
+
                     // Get username from the database
                     const username = ""; // Replace with actual username from the database
 
@@ -102,8 +125,9 @@ include_once 'header.php';
                     const dateTimeString = currentDate.toLocaleString();
 
                     // Generate report
-                    // Generate report
                     const reportDiv = document.getElementById("report");
+
+
                     const htmlString = `
                     <div class="report">
   <div class="report-header">
@@ -141,7 +165,6 @@ include_once 'header.php';
                 });
 
                 // Get the top 5 most keyed in symptoms
-               
               </script>
 
 

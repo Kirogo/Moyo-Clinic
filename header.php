@@ -26,12 +26,15 @@ if (isset($_SESSION["useruid"]) || isset($_SESSION["userid"])) {
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
     <link href="css/app.css" rel="stylesheet" />
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <style>
 
     </style>
     <style>
         .input-container {
             margin-bottom: 10px;
+            margin: 0 auto;
         }
 
         .datainput {

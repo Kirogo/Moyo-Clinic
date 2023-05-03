@@ -70,9 +70,10 @@ if (isset($_SESSION["useruid"]) || isset($_SESSION["userid"])) {
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="admin-index.php" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Dashboard</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="create-profile.php" aria-expanded="false"><i class="mdi mdi-account-network"></i><span class="hide-menu">Profiles</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="disease.php" aria-expanded="false"><i class="mdi mdi-border-all"></i><span class="hide-menu">Diseases</span></a></li>
+                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="admin-index.php" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">Dashboard</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="create-profile.php" aria-expanded="false"><i class="mdi mdi-account-card-details"></i><span class="hide-menu">Profile</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="disease.php" aria-expanded="false"><i class="mdi mdi-hospital"></i><span class="hide-menu">Diseases</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="searcheddata.php" aria-expanded="false"><i class="mdi mdi-stethoscope"></i><span class="hide-menu">Diagnostic Results</span></a></li>
                         <li class="text-center p-20 upgrade-btn">
                         </li>
 
